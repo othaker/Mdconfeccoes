@@ -142,3 +142,7 @@
     </footer>
 </body>
 </html>
+
+git add .
+git commit -m "Publicando site MF Confecções"
+git push origin main
