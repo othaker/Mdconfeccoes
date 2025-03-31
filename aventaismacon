@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF Confecções - Paramentos Maçônicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #002147, #003366);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #002147;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #003366;
+            border-radius: 5px;
+        }
+        .hero {
+            background: url('banner.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .btn-buy {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: #ff4500;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-buy:hover {
+            background: #e63e00;
+        }
+        footer {
+            background: #002147;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>MF Confecções - Paramentos Maçônicos</header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Contato</a>
+    </nav>
+    <div class="hero">Excelência em Paramentos Maçônicos</div>
+    <div class="container">
+        <div class="grid">
+            <div class="product">
+                <img src="placeholder.jpg" alt="Avental Maçônico">
+                <h2>Avental Maçônico</h2>
+                <p>Alta qualidade e acabamento impecável.</p>
+                <a href="#" class="btn-buy">Comprar</a>
+            </div>
+            <div class="product">
+                <img src="placeholder.jpg" alt="Colar Maçônico">
+                <h2>Colar Maçônico</h2>
+                <p>Detalhes refinados e símbolos autênticos.</p>
+                <a href="#" class="btn-buy">Comprar</a>
+            </div>
+            <div class="product">
+                <img src="placeholder.jpg" alt="Luvas Maçônicas">
+                <h2>Luvas Maçônicas</h2>
+                <p>Confortáveis e elegantes para cerimônias.</p>
+                <a href="#" class="btn-buy">Comprar</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 MF Confecções. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
