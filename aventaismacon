@@ -1,148 +1,130 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MF Confecções - Paramentos Maçônicos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Deus Existe?</title>
     <style>
-        * {
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
         }
-        body {
-            background-color: #f4f4f4;
+        h1 {
             color: #333;
         }
-        header {
-            background: linear-gradient(135deg, #002147, #003366);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 600;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #002147;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #003366;
-            border-radius: 5px;
-        }
-        .hero {
-            background: url('banner.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-        }
         .container {
-            max-width: 1200px;
-            margin: 40px auto;
+            background-color: white;
             padding: 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .product {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .product:hover {
-            transform: scale(1.05);
-        }
-        .product img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
         }
-        .btn-buy {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background: #ff4500;
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
             color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
         }
-        .btn-buy:hover {
-            background: #e63e00;
+        .btn:hover {
+            background-color: #45a049;
         }
-        footer {
-            background: #002147;
+        .btn:disabled {
+            background-color: #ddd;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .option-btn {
+            padding: 8px 15px;
+            margin: 5px;
+            background-color: #2196F3;
             color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option-btn:hover {
+            background-color: #1976D2;
         }
     </style>
 </head>
 <body>
-    <header>MF Confecções - Paramentos Maçônicos</header>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Produtos</a>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Contato</a>
-    </nav>
-    <div class="hero">Excelência em Paramentos Maçônicos</div>
-    <div class="container">
-        <div class="grid">
-            <div class="product">
-                <img src="placeholder.jpg" alt="Avental Maçônico">
-                <h2>Avental Maçônico</h2>
-                <p>Alta qualidade e acabamento impecável.</p>
-                <a href="#" class="btn-buy">Comprar</a>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Colar Maçônico">
-                <h2>Colar Maçônico</h2>
-                <p>Detalhes refinados e símbolos autênticos.</p>
-                <a href="#" class="btn-buy">Comprar</a>
-            </div>
-            <div class="product">
-                <img src="placeholder.jpg" alt="Luvas Maçônicas">
-                <h2>Luvas Maçônicas</h2>
-                <p>Confortáveis e elegantes para cerimônias.</p>
-                <a href="#" class="btn-buy">Comprar</a>
-            </div>
-        </div>
+
+    <div class="container" id="gameContainer">
+        <h1>Deus Existe?</h1>
+        <p id="questionText">Você acredita que Deus existe?</p>
+        <button class="btn" onclick="answerYes()">Sim</button>
+        <button class="btn" onclick="answerNo()">Não</button>
     </div>
-    <footer>
-        &copy; 2025 MF Confecções. Todos os direitos reservados.
-    </footer>
+
+    <script>
+        const gameContainer = document.getElementById('gameContainer');
+        const questionText = document.getElementById('questionText');
+
+        function answerYes() {
+            gameContainer.innerHTML = `
+                <h1>Qual Deus?</h1>
+                <p>Escolha uma opção abaixo:</p>
+                <div class="options">
+                    <button class="option-btn" onclick="showAnswer()">Deus Cristão</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus Hindu</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus Muçulmano</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus Judaico</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus Buda</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Deuses Gregos</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus Egípcio</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Viking</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Nórdicos</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus do Panteão Romano</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Shintoístas</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Maias</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus das Religiões Africanas</button>
+                    <button class="option-btn" onclick="showAnswer()">Deus dos Indígenas</button>
+                </div>
+            `;
+        }
+
+        function answerNo() {
+            gameContainer.innerHTML = `
+                <h1>Parabéns!</h1>
+                <p>Você escolheu não acreditar em Deus.</p>
+                <button class="btn" onclick="restartGame()">Recomeçar</button>
+            `;
+        }
+
+        function showAnswer() {
+            gameContainer.innerHTML = `
+                <h1>Será?</h1>
+                <p>Você escolheu um deus, mas será que ele realmente existe?</p>
+                <button class="btn" onclick="restartGame()">Recomeçar</button>
+            `;
+        }
+
+        function restartGame() {
+            gameContainer.innerHTML = `
+                <h1>Deus Existe?</h1>
+                <p id="questionText">Você acredita que Deus existe?</p>
+                <button class="btn" onclick="answerYes()">Sim</button>
+                <button class="btn" onclick="answerNo()">Não</button>
+            `;
+        }
+    </script>
+
 </body>
 </html>
-
 git add .
-git commit -m "Publicando site MF Confecções"
+git commit -m "MF Confecções"
 git push origin main
